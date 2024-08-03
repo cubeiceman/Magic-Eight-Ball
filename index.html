@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    const responses = ["Absolutely!", "Your spirits say no.", "Your fortune says yes!", "LOL no.", "Unclear. Ask again.", "When pigs fly...so no.", "Patience. Ask again later.", "It is inevitable."]
+
+    let index;
+
+    let quit = false;
+    let question;
+    while (!quit) {
+      question = prompt("This 8 ball knows your future...Ask your questions, if you dare. (quit to quit)");
+      if (question === null || question === "") {
+        alert("Ask a question already, why else are you here?");
+      }
+      else if (question.toLowerCase() === "quit") {
+        quit = true;
+      }
+      else {
+        index = Math.floor(Math.random() * 8);
+        alert(responses[index])
+      }
+    }
+    alert("Remember these answers and keep them close to your heart...for they will help you more than you'll ever know.");
+    
+  </script>
+</body>
+
+</html>
